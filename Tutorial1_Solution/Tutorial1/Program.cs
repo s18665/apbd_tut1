@@ -10,8 +10,15 @@ namespace Tutorial1
         public static async Task Main(string[] args)
         {
             Console.WriteLine("TEST2");
-            
-            var websiteUrl = args[0];
+
+            var websiteUrl = args.Length > 0 ? args[0] : throw new ArgumentNullException();
+
+            //string websiteUrl = null;
+
+            if (websiteUrl == null)
+            {
+                throw new ArgumentNullException("ERROR1");
+            }
             var httpClient = new HttpClient();
 
             var respones = await httpClient.GetAsync(websiteUrl);
