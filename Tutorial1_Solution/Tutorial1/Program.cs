@@ -9,7 +9,7 @@ namespace Tutorial1
     {
         public static async Task Main(string[] args)
         {
-            Console.WriteLine("TEST");
+            Console.WriteLine("TEST2");
             
             var websiteUrl = args[0];
             var httpClient = new HttpClient();
